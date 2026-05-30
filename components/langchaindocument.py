@@ -15,6 +15,18 @@ doclist=[item for sublist in docs for item in sublist]
 retriever=retriver(doclist)
 retriever_tool_langchain = create_retriever_tool(
     retriever,
-    "search",
-    "Use ONLY for questions about LangChain documentation, APIs, or tutorials. Do NOT use for creative tasks, greetings, or general writing."
+    "langchain_search",
+ """
+    Search the LangChain knowledge base.
+
+    MUST use this tool for any question about:
+    - LangChain
+    - ToolNode
+    - APIs
+    - Documentation
+    - Tutorials
+
+    Always search before answering these topics.
+    Do not answer from prior knowledge.
+    """
 )

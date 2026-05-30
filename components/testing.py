@@ -1,3 +1,3 @@
 from graph import builder 
-res=builder.invoke({"messages":"write a poem"})
+res=builder.invoke({"messages":"what is langchain and langgraph"})
 print(res)

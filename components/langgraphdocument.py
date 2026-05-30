@@ -11,6 +11,17 @@ doclist=[item for sublist in docs for item in sublist]
 retriever=retriver(doclist)
 retriever_tool_langgraph = create_retriever_tool(
     retriever,
-    "search",
-    "Use ONLY for questions about LangGraph documentation, APIs, or tutorials. Do NOT use for creative tasks, greetings, or general writing."
-)
+    "langgraph_search",
+ """
+    Search the LangGraph knowledge base.
+
+    MUST use this tool for any question about:
+    - LangGraph
+    - ToolNode
+    - APIs
+    - Documentation
+    - Tutorials
+
+    Always search before answering these topics.
+    Do not answer from prior knowledge.
+    """)
