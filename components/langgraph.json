@@ -1,0 +1,9 @@
+{
+  "source": {
+    "kind": "uv",
+    "root": "."
+  },
+  "graphs": {
+    "main": "graph:builder"
+  }
+}
